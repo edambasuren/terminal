@@ -44,14 +44,14 @@ Output of Subscribing Server is
 $ tail -f eventServer.log
 [Wed Jun 17 19:47:56 2020] PHP 7.4.7 Development Server (http://localhost:8080) started
 [Wed Jun 17 19:53:25 2020] 127.0.0.1:52668 Accepted
-[Wed Jun 17 19:53:25 2020] Received message. Topic: 'topic1' Body: 'hello'
+[Wed Jun 17 19:53:25 2020] **Received message. Topic: 'topic1' Body: 'hello'**
 [Wed Jun 17 19:53:25 2020] 127.0.0.1:52668 Closing
 ```
 
 ## Comments:
 
 * To keep runtime state of Publisher Server we use "memcached" service. 
-We could have used SQL databases instead (slower, more complex), 
+We could have used SQL database instead (MySQL, SQLite - slower, more complex), 
 or Redis (more scalable, offers greater flexibility).
 
 * PHP entry point router.php is for tests with PHP built-in web server only, it is not needed
@@ -59,7 +59,7 @@ for full webservers like Apache or NGINX, other methods used to hide PHP file ex
 
 * Due to use of PHP built-in web server, I had to run 2 different web servers on different ports: 8000 and 8080.
 
-* In more developed environments a lot of lower level code will be replaced by use of frameworks and libraries.
+* In more developed environment a lot of lower level code will be replaced by use of frameworks and libraries.
 
 
 

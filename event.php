@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$json = file_get_contents('php://input');
 	$data = json_decode($json, true);
 	//error_log(print_r($data, true));
-	error_log("Received message. Topic: '".$data['topic']."' Body: '".$data['data']['msg']."'");
+	error_log("**Received message. Topic: '".$data['topic']."' Body: '".$data['data']['msg']."'**");
 
 } else {
 	header("HTTP/1.1 404 Not Found");
